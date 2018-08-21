@@ -8,7 +8,6 @@ class GuessCardsTest < Minitest::Test
     guess = Guess.new("10 of Hearts", card)
     assert_instance_of Guess, guess
   end
-
 end
   # def test_gives_response
   #   guess = Guess.new("10 of Hearts", card)
