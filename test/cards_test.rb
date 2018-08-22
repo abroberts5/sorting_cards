@@ -13,4 +13,6 @@ class SortingCardsTest < Minitest::Test
     assert_equal "Spades", card.suit
     assert_equal "Ace", card.value
   end
+
+
 end

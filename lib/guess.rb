@@ -2,18 +2,25 @@ class Guess
   attr_reader :card,
               :response
 
-  def initialize("10 of Hearts", card)
-    @card = card
+  def initialize(response, card)
+    @card     = card
     @response = response
   end
 
-  def guess(card)
-    if card == @value, @suit
-      "#{@value} of #{@suit}"
-    else card != @value, @suit
+  def correct?
+    if @response == "#{card.value} of #{card.suit}"
+      true
+    else
       false
+    end
   end
 
-  # require 'pry'; binding.pry
-
+  def feedback
+    if correct? == true
+      "Correct!"
+    else correct? == false
+      "Incorrect."
+      binding.pry; require 'pry'
+    end
+  end
 end
