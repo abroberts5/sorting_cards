@@ -2,7 +2,7 @@ class Guess
   attr_reader :card,
               :response
 
-  def initialize(response, card)
+  def initialize(card, response)
     @card     = card
     @response = response
   end
@@ -20,7 +20,6 @@ class Guess
       "Correct!"
     else correct? == false
       "Incorrect."
-      binding.pry; require 'pry'
     end
   end
 end
