@@ -69,6 +69,8 @@ class RoundTest < Minitest::Test
     round.record_guess({value: "3", suit: "Hearts"})
     round.record_guess({value: "Jack", suit: "Diamonds"})
     assert_equal 2, round.guesses.count
+    assert_equal card_1, round.current_card
+    assert_equal card_2, round.current_card
     assert_equal "Incorrect.", round.guesses.last.feedback
     assert_equal 1, round.number_correct
   end
@@ -81,16 +83,5 @@ class RoundTest < Minitest::Test
     round.record_guess({value: "3", suit: "Hearts"})
     round.record_guess({value: "Jack", suit: "Diamonds"})
     assert_equal 50.0, round.percent_correct
-  end
-
-  def test_it_can_sort_the_deck
-    card_1 = Card.new("4","Hearts")
-    card_2 = Card.new("Ace", "Spades")
-    card_3 = Card.new("5", "Diamonds")
-    card_4 = Card.new("Jack", "Clubs")
-    card_5 = Card.new("Ace", "Diamonds")
-    deck = Deck.new([card_1, card_2, card_3, card_4, card_5])
-    sorted = [card_1, card_3, card_4, card_5, card_2]
-    assert_equal sorted, deck.sort
   end
 end
