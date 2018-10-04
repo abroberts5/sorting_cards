@@ -26,5 +26,6 @@ class CardTest < Minitest::Test
     card_2 = Card.new("Queen", "Hearts")
     assert_equal 4, card.card_suit_num
     assert_equal 3, card_2.card_suit_num
+    assert_equal 18, card.card_sum
   end
 end
