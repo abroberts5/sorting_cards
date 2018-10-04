@@ -22,4 +22,7 @@ class Deck
     end
   end
 
+  def merge_sort
+
+  end
 end
