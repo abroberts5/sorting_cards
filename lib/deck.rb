@@ -3,7 +3,6 @@ class Deck
 
   def initialize(cards)
     @cards      = cards
-    @sorted     = []
   end
 
   def count
@@ -11,6 +10,16 @@ class Deck
   end
 
   def sort
-    # require 'pry';binding.pry
+    loop do
+      sorted = false
+      (@cards.length - 1).times do |val|
+        if @cards[val].card_sum > @cards[val + 1].card_sum
+          @cards[val], @cards[val + 1] = @cards[val + 1], @cards[val]
+          sorted = true
+        end
+      end
+      return @cards if not sorted
+    end
   end
+
 end

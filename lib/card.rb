@@ -7,6 +7,10 @@ class Card
     @suit       = suit
   end
 
+  def card_sum
+    card_value_num + card_suit_num
+  end
+
   def card_value_num
     values = {"2" => 2, "3" => 3, "4" => 4,
               "5" => 5, "6" => 6, "7" => 7,

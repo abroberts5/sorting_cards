@@ -1,18 +1,14 @@
 class Guess
-  attr_reader       :guess,
+  attr_reader       :response,
                     :card
 
   def initialize(guess, card)
-    @guess      = guess
+    @response   = guess
     @card       = card
   end
 
-  def response
-    @guess
-  end
-
   def correct?
-    if @guess == "#{@card.value} of #{@card.suit}"
+    if @response == "#{@card.value} of #{@card.suit}"
       true
     else
       false
