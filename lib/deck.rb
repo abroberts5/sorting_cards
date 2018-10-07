@@ -12,9 +12,12 @@ class Deck
   def sort
     loop do
       sorted = false
-      (@cards.length - 1).times do |val|
+      (@cards.length-1).times do |val|
         if @cards[val].card_sum > @cards[val + 1].card_sum
-          @cards[val], @cards[val + 1] = @cards[val + 1], @cards[val]
+          first  = @cards[val]
+          second = @cards[val + 1]
+          @cards[val + 1] = first
+          @cards[val]     = second
           sorted = true
         end
       end

@@ -29,7 +29,7 @@ class DeckTest < Minitest::Test
     card_3 = Card.new("5", "Diamonds")
     card_4 = Card.new("Jack", "Clubs")
     card_5 = Card.new("Ace", "Diamonds")
-    deck = Deck.new([card_1, card_2, card_3, card_4, card_5])
+    deck = Deck.new([card_3, card_1, card_5, card_2, card_4])
     sorted = [card_1, card_3, card_4, card_5, card_2]
     assert_equal sorted, deck.sort
   end

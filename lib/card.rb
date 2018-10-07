@@ -21,8 +21,8 @@ class Card
   end
 
   def card_suit_num
-    values = {"Clubs" => 1, "Diamonds" => 2,
-              "Hearts" => 3, "Spades" => 4}
+    values = {"Clubs" => 3, "Diamonds" => 3,
+              "Hearts" => 3, "Spades" => 3}
     values[@suit]
   end
 end
