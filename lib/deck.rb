@@ -25,4 +25,8 @@ class Deck
     end
   end
 
+  def random_card
+    random = @cards.shuffle.last
+    random
+  end
 end

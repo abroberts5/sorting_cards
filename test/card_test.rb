@@ -28,4 +28,5 @@ class CardTest < Minitest::Test
     assert_equal 15, card_2.card_sum
     assert_equal 17, card.card_sum
   end
+
 end
