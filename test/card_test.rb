@@ -24,8 +24,9 @@ class CardTest < Minitest::Test
   def test_it_can_assign_number_to_suit
     card = Card.new("Ace", "Spades")
     card_2 = Card.new("Queen", "Hearts")
-    assert_equal 4, card.card_suit_num
-    assert_equal 3, card_2.card_suit_num
-    assert_equal 18, card.card_sum
+    assert_equal 3, card.card_suit_num
+    assert_equal 15, card_2.card_sum
+    assert_equal 17, card.card_sum
   end
+
 end
